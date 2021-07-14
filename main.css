@@ -1,0 +1,408 @@
+/* importing google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+/* utils style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #e02c6d;
+  --secondary-color: #2d25a0;
+  --light-gray: #f8f8f8;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.btn > .fas {
+  margin-left: 8px;
+}
+
+.btn__primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn__primary:hover {
+  background-color: white;
+  color: black;
+  transition: all 0.2s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bg__primary {
+  background-color: var(--primary-color);
+}
+
+.bg__secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg__light {
+  background-color: var(--light-gray);
+}
+
+.container {
+  max-width: 1266px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: #0a0826;
+  margin-bottom: 8px;
+}
+
+.text__white {
+  color: white;
+}
+
+/* header styles  */
+header {
+  width: 100%;
+  padding: 30px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1266px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+nav .nav__left {
+  display: flex;
+  list-style: none;
+}
+
+nav .nav__left li {
+  margin-right: 36px;
+}
+
+nav .nav__link {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+nav .nav__link:hover {
+  color: var(--primary-color);
+  transition: all 0.2s;
+}
+
+.mb__icon {
+  display: none;
+  color: white;
+  font-size: 25px;
+}
+
+/* flexable block  */
+.flexable__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.half__width {
+  width: 50%;
+}
+
+.half__width img {
+  width: 100%;
+}
+
+/* hero section  */
+
+.hero__section {
+  padding: 67px 0;
+  display: flex;
+  align-items: center;
+}
+
+.banner__title {
+  font-size: 64px;
+  color: white;
+  line-height: 80px;
+  font-weight: 700;
+  margin-bottom: 27px;
+}
+
+.banner_img {
+  animation: MoveUpDown 5s linear infinite;
+  position: relative;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50px;
+  }
+}
+
+/* players section  */
+
+.players__section,
+.highlight__section,
+footer {
+  padding: 70px 0;
+}
+
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.player {
+  background: #ffffff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+}
+
+.player img {
+  width: 100%;
+}
+
+.player h3 {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.player p,
+.section__desc {
+  font-size: 16px;
+  line-height: 26px;
+  color: #6c6c6c;
+  margin-bottom: 16px;
+}
+
+.hightlight__left {
+  padding-right: 15px;
+}
+
+/* gallery section  */
+.gallery__section {
+  background: url("./assets/bg-img.jpg");
+  padding: 70px 0;
+}
+
+.gallery__parent {
+  column-count: 3;
+  column-gap: 10px;
+  margin-top: 30px;
+}
+
+.gallery__parent img {
+  width: 100%;
+}
+
+.gallery__parent img:hover {
+  filter: sepia(1);
+  transition: all 0.2s;
+}
+
+/* review__section  */
+
+.review__section .flexable__block {
+  align-items: stretch;
+}
+
+.review__left {
+  background: linear-gradient(
+      to top,
+      rgba(36, 36, 36, 0.7),
+      rgba(26, 26, 26, 0.8)
+    ),
+    url("./assets/bg-img-2.jpg") center center/cover;
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.review__left a {
+  text-decoration: none;
+}
+
+.review__left .fas {
+  background: var(--primary-color);
+  color: white;
+  padding: 30px;
+  border-radius: 50%;
+  font-size: 50px;
+  width: 120px;
+  height: 120px;
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.review__left .fas:hover {
+  background: white;
+  color: var(--primary-color);
+  transition: all 0.2s;
+}
+
+.review__right {
+  padding: 30px;
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    url("./assets/gallery/gallery-img-3.jpg") center center/cover;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* footer section  */
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_logo img {
+  max-width: 483px;
+  width: 95%;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.footer__social a {
+  text-decoration: none;
+  margin: 0 7px;
+}
+
+.footer__social .fab {
+  width: 32px;
+  height: 32px;
+  background-color: #e7e7e8;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  line-height: 0;
+  color: #969bab;
+}
+
+.footer__social .fab:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transition: all 0.2s;
+}
+
+.copyright {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Tablet Responsive  */
+@media only screen and (max-width: 991px) {
+  .mb__icon {
+    display: block;
+  }
+
+  nav .nav__left {
+    display: none;
+  }
+
+  .banner__title {
+    font-size: 41px;
+    line-height: 53px;
+  }
+
+  .half__width img {
+    width: 90%;
+  }
+
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section__title {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  .gallery__parent {
+    column-count: 2;
+  }
+  .review__section .flexable__block {
+    flex-direction: column;
+  }
+  .review__section .flexable__block .half__width {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  .flexable__block {
+    flex-direction: column;
+  }
+  .half__width {
+    width: 100%;
+  }
+  .banner__left {
+    margin-bottom: 30px;
+  }
+  .banner__right {
+    margin-top: 35px;
+  }
+
+  .players {
+    grid-template-columns: 1fr;
+  }
+
+  .hightlight__left {
+    margin-bottom: 30px;
+  }
+
+  .gallery__parent {
+    column-count: 1;
+  }
+
+  .half__width img {
+    width: 100%;
+  }
+}
