@@ -211,6 +211,7 @@ footer {
 .gallery__section {
   background: url("./assets/bg-img.jpg");
   padding: 70px 0;
+  background-attachment: fixed;
 }
 
 .gallery__parent {
